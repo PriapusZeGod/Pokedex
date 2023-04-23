@@ -6,9 +6,7 @@ function App() {
   return (
     <nav>
       <Link to="/" element={<Home />}></Link>
-      <Link to="/:pokemonId" element={<About />}>
-        About
-      </Link>
+      <Link to="/:pokemonId" element={<About />}></Link>
     </nav>
   );
 }
