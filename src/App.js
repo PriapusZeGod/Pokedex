@@ -1,23 +1,15 @@
 import React, { useState, useEffect } from "react";
-import {
-  RouterProvider,
-  createBrowserRouter,
-  useParams,
-} from "react-router-dom";
+import { RouterProvider, createHashRouter, useParams } from "react-router-dom";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/:pokemonId",
-      element: <About />,
-    },
-  ]);
-
-  return <RouterProvider router={router} />;
+  return (
+    <nav>
+      <Link to="/" element={<Pokedex />}></Link>
+      <Link to="/:pokemonId" element={<PokemonDetails />}>
+        About
+      </Link>
+    </nav>
+  );
 }
 
 function Home() {
@@ -129,7 +121,7 @@ function Card({ pokemonName, pokemonUrl }) {
 
   return (
     pokemonData && (
-      <a href={"/" + pokemonData.id} className="card" style={cardStyle}>
+      <Link to={"/" + pokemonData.id} className="card" style={cardStyle}>
         {pokemonData ? (
           <>
             <div className="card-devider">
@@ -147,7 +139,7 @@ function Card({ pokemonName, pokemonUrl }) {
         ) : (
           <p>Loading...</p>
         )}
-      </a>
+      </Link>
     )
   );
 }
