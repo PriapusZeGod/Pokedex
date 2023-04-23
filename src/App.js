@@ -13,7 +13,7 @@ function App() {
   );
 }
 
-function Home() {
+export function Home() {
   const [pokemonList, setPokemonList] = useState([]);
   const [previousUrl, setPreviousUrl] = useState(null);
   const [nextUrl, setNextUrl] = useState(null);
