@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { RouterProvider, createHashRouter, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
     <nav>
-      <Link to="/" element={<Pokedex />}></Link>
+      <Link to="/" element={<Home />}></Link>
       <Link to="/:pokemonId" element={<PokemonDetails />}>
         About
       </Link>
