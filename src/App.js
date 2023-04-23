@@ -145,7 +145,7 @@ function Card({ pokemonName, pokemonUrl }) {
   );
 }
 
-function About() {
+export function About() {
   const { pokemonId } = useParams();
   const [pokemon, setPokemon] = useState({});
   const [abilities, setAbilities] = useState([]);
