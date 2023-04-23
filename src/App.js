@@ -256,10 +256,6 @@ export function About() {
             </div>
           );
         })}
-
-        <a className="btn" href="/">
-          Back
-        </a>
       </div>
     )
   );
