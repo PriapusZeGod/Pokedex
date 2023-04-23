@@ -165,13 +165,11 @@ PokemonDetails {
 
 .pokemon-img {
   display: inline;
-  transform: translateX(600%);
 }
 
 .pokemon-name {
   display: inline;
   position: absolute;
-  transform: translateX(300%);
   top: 0.8%;
   margin-left: 20px;
 }
